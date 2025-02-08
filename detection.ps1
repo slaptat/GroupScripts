@@ -1,5 +1,5 @@
 <#
-IFT380 Mod4  - Group Lab 2 
+IFT380 Mod4  - NOCorps Lab 2 
 Well start by detecting for HiveNightmare, then remediation
 #>
 

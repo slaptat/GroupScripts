@@ -1,4 +1,4 @@
-# Notes on group project: HIVENightmare and PrintNIghtMare
+# Notes on NOCorp's project: HIVENightmare and PrintNIghtMare. 
 
 + [ ] A script to Detect if the HiveNightmare problem exists
 
