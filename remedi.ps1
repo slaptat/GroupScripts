@@ -13,5 +13,15 @@ else {
     Return "Fail"
 }
 
-icacls $env:windir\system32\config\*.* /inheritance:e
+# Remove vulnerable permissions from SAM file
+icacls $env:windir\system32\config\sam /remove:g Everyone
+icacls $env:windir\system32\config\sam /remove:g "BUILTIN\Users"
+
+# Restrict access to the entire config folder
+icacls $env:windir\system32\config /remove:g Everyone
+icacls $env:windir\system32\config /remove:g "BUILTIN\Users"
+
+# Restore correct inheritance for SAM and config folder
+icacls $env:windir\system32\config\sam /inheritance:e
+icacls $env:windir\system32\config /inheritance:e
     

@@ -5,7 +5,7 @@ Detection
 
 $prived =  icacls $env:windir\system32\config\sam 
 
-if ($prived -like '*NT AUTHORITY\SYSTEM:(I)(F)*') {
+if ($prived -like "*Everyone|BUILTIN\Users*") {
     # We have access, system is vulnerable...probably actually a failure
     return "Success"
 }  
